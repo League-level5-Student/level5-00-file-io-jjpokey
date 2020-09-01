@@ -112,7 +112,8 @@ public class ToDoList implements ActionListener {
 		
 		if(buttonPressed == loadList) {
 			String readLine = "";
-			//for loop? ONLY READS ONE LINE
+			ArrayList<String> linelist = new ArrayList<String>();
+			
 			try {
 				BufferedReader br = new BufferedReader(new FileReader("src/_03_To_Do_List/savedList.txt"));
 				
@@ -120,6 +121,7 @@ public class ToDoList implements ActionListener {
 				while(line != null){
 					System.out.println(line);
 					readLine = line;
+					linelist.add(readLine);
 					line = br.readLine();
 				}
 				
@@ -131,7 +133,9 @@ public class ToDoList implements ActionListener {
 				// TODO Auto-generated catch block
 				e2.printStackTrace();
 			}
-			
+			for(int i = 0; i < linelist.size(); i++) {
+				taskList.add(linelist.get(i));
+			}
 			
 		}
 		
