@@ -55,3 +55,5 @@ public class DirectoryIterator {
 	}
 }
 
+
+ //Copyright © 2020 Jason Elliott
